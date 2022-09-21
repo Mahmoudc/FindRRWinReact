@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import AddRRUser from './components/AddRRUser';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component {
+  state = {
+    Rr: {}
+  }
+  render() {
+    return ( 
+    <div className="App container">
+      <h2 className='center-align light-blue'>Risk To Reward Calculator</h2>
+     {/* Now I have to add all the important input parmaters starting with account balance*/}
+     <AddRRUser />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
